@@ -12,6 +12,8 @@ searchBtn.on('click', async function (event) {
     movieName = $('#searchInput').val();
     movieResult = await movieLookup(movieName);
 
+    console.log(movieResult)
+
 })
 
 // movieLookup(movieName)
