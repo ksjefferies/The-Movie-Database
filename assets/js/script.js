@@ -2,7 +2,8 @@
 
 
 //global variables
-var apiKey = 'cd11b9a1';
+var requestUrl = 'https://api.themoviedb.org/3/movie/76341?';
+var apiKey = '25047ef5fe9b327736be92fc2545e887';
 
 
 
@@ -15,3 +16,4 @@ var apiKey = 'cd11b9a1';
 
 
 // Dynamic Jquery elements
+
