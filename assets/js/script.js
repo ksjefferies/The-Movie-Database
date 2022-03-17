@@ -25,7 +25,8 @@ searchBtn.on('click', async function (event) {
     })
     console.log(videoTrailer[videoTrailer.length - 1].key)
 
-
+    $('body').append($("<img>",{src: "https://image.tmdb.org/t/p/"+ "w154" +  movieResult.results[0].poster_path}))
+    $('body').append($("<img>",{src: "https://image.tmdb.org/t/p/"+ "w342" +  movieResult.results[0].poster_path}))
 
     trailers.attr('src', "https://www.youtube.com/embed/" + videoTrailer[videoTrailer.length - 1].key)
 })
@@ -105,10 +106,6 @@ async function genresLookup() {
             return JSON.parse(text)
         })
 }
-
-
-
-
 
 
 
