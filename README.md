@@ -25,6 +25,10 @@
     - cast
 
 # Items Completed
+- All API's added and functions created to fetch the requested data
+- Added embedded video links to play both searched movie and random upcoming movies onto the index.html
+- linked two images on index.html for both tile thumbnail images as well as larger image for the detailed search result page
+- linked search button on index.html to start the inputted movie search
 
 
 # Contributions: Sites Used 
