@@ -8,3 +8,14 @@
   float: right;
 
 }
+
+body {
+  background-color: lightgray;
+}
+
+
+#searchBtn {
+  border-color: blue;
+  color: azure;
+}
+
