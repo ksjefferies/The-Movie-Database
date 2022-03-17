@@ -10,10 +10,11 @@ searchBtn.on('click', async function (event) {
     event.preventDefault();
 
     movieName = $('#searchInput').val();
-    movieResult = await movieLookup(movieName);
+   let  movieResult = await movieLookup(movieName);
 
     console.log(movieResult)
-
+    let castResult = await creditLookup(movieResult.results[0].id)
+    console.log(castResult)
 })
 
 // movieLookup(movieName)
@@ -36,8 +37,24 @@ async function movieLookup(movieName) {
         })
 }
 
-async function creditLookup() {
+async function creditLookup(movie_id) {
+    let apiSite = 'https://api.themoviedb.org/3/movie/' + movie_id +'/credits?';
+    let requestParam = {
+        api_key: api_key,
+    };
+    let queryString = jQuery.param(requestParam);
+    let requestUrl = apiSite + queryString;
 
+    return fetch(requestUrl)
+        .then(function (response) {
+            return response.text()
+        })
+        .then(function (text) {
+            return JSON.parse(text)
+        })
 }
+    
     //fetch OMDB
     // parse into usable array of objects
+
+    // movie DataTransferItemLi
