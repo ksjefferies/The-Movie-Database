@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-#nav-item {
-  margin: 5px;
-  padding-top: 5px;
+.search {
+  display: block;
+  float: right;
+
 }
-/* test */
