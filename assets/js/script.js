@@ -4,9 +4,14 @@ var searchImages = $('#searchResults');
 var trailers = $('#trailers');
 var upComing = $('#upComing');
 
+
 //global variables
 const api_key = '1fc2de251859dcddc136157f2a89acbe';
 var currentSlide = 1;
+
+$('#landingBtn').on("click",function () {
+  location.href = "index.html";
+} )
 
 // API functions start gathering movie information on click
 searchBtn.on('click', async function (event) {
@@ -16,31 +21,7 @@ searchBtn.on('click', async function (event) {
 
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
-
-  let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
-
-  // let popularMovies = await topPopularMovies()
-  // console.log(topRated)
-
-  let videoResult = await videoLookup(movieResult.results[0].id) // Retrieve video info for movie being searched
-  let videoTrailer = videoResult.results.filter(function (item) {
-    return item.type == 'Trailer'
-  })
-
-  let sneakResult = await upcomingMovies(); // Retrieve list of upcoming movies 
-
-  let sneakPreview = await videoLookup(sneakResult.results[(Math.floor(Math.random() * 10))].id) // Retrieve random upcoming movie trailer
-  let previewResult = sneakPreview.results.filter(function (item) {
-    return item.type == 'Trailer'
-  })
-  displaySearchResults(movieResult);
-  // Images for thumbnail and search results pages
-  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[0].poster_path }))
-  $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w342' + movieResult.results[0].poster_path }))
-
-  // Trailers for both selected movie and upcoming movie
-  trailers.attr('src', 'https://www.youtube.com/embed/' + videoTrailer[videoTrailer.length - 1].key)
-  upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)
+  displaySearchResults(movieResult.results.slice(0,8));
 })
 
 // Param URL and api_key + any parameters
@@ -113,9 +94,17 @@ function showSlide(slideIndex) {
 }
 
 function displaySearchResults(movieResult) {
-  for (var i = 0; i < 12; i++) {
-    searchImages.append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[i].poster_path }));
-    // $('img').attr('alt', movieResult.results[i].title);
+  searchImages.empty();
+  for (var i = 0; i < movieResult.length; i++) {
+    let imageProperties = {
+      src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult[i].poster_path,
+      alt: movieResult[i].title
+    }
+    let linkParams = jQuery.param({id: movieResult[i].id})
+    $link = $("<a>", {href: "movie-page.html?" + linkParams})
+    $img = $('<img>', imageProperties)
+    
+    searchImages.append($link.append($img));
   }
 }
 
@@ -147,6 +136,33 @@ window.onload = function () {
 // console.log(sneakPreview) // (VideoLookup)
 // console.log(videoTrailer[videoTrailer.length - 1].key) // (videoTrailer) Key
 
+
+  // let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
+
+  // // let popularMovies = await topPopularMovies()
+  // // console.log(topRated)
+
+  // let videoResult = await videoLookup(movieResult.results[0].id) // Retrieve video info for movie being searched
+  // let videoTrailer = videoResult.results.filter(function (item) {
+  //   return item.type == 'Trailer'
+  // })
+
+  // let sneakResult = await upcomingMovies(); // Retrieve list of upcoming movies 
+
+  // let sneakPreview = await videoLookup(sneakResult.results[(Math.floor(Math.random() * 10))].id) // Retrieve random upcoming movie trailer
+  // let previewResult = sneakPreview.results.filter(function (item) {
+  //   return item.type == 'Trailer'
+  // })
+ 
+  // Images for thumbnail and search results pages
+  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[0].poster_path }))
+  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w342' + movieResult.results[0].poster_path }))
+
+  // // Trailers for both selected movie and upcoming movie
+  // trailers.attr('src', 'https://www.youtube.com/embed/' + videoTrailer[videoTrailer.length - 1].key)
+  // upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)
+
+  
 var testBtn = $("#test");
 
 testBtn.on("click", function(){
@@ -173,4 +189,3 @@ function rating(){
 function castList(){
   $("#castList").text("test")
 }
-
