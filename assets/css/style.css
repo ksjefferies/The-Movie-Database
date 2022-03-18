@@ -13,18 +13,16 @@ body {
   background-color: lightgray;
 }
 
-
+nav{
+  position: fixed;
+  
+}
 #searchBtn {
   border-color: blue;
   color: azure;
 }
-
-.jumbotron {
-  background-image: url(../images/popcorn.gif);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  background-size: cover;
+#searchBtn:hover {
+  background-color: blue;
 }
 
 .display-3 {
@@ -35,3 +33,9 @@ body {
   color: white;
 
 }
+
+#pop {
+  background-image: url(../images/pop.gif);
+  background-size: cover;
+}
+
