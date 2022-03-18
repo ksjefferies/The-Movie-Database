@@ -23,7 +23,7 @@ body {
   outline: 2px solid white;
 }
 
-.trailer {
+#trailer-container {
   flex-basis: 70%;
   outline: 2px solid white;
 }
@@ -34,7 +34,7 @@ body {
   outline: 2px solid white;
 }
 
-.description {
+#description {
   flex-basis: 70%;
   outline: 2px solid white;
   padding: 2%;
@@ -43,25 +43,9 @@ body {
 .movie-details {
   flex-basis: 30%;
   outline: 2px solid white;
-  display: flex;
-}
-
-.details-fields {
-  flex-basis: 40%;
-  outline: 2px solid white;
   padding: 2%;
 }
 
-.detail-info {
-  flex-basis: 60%;
-  outline: 2px solid white;
-  padding: 2%;
-}
-
-.detail-info ul {
-  list-style: none;
-  padding-left: 0;
-}
 
 /* Aside section (Similar movie suggestions) */
 .similar-movies {
@@ -95,13 +79,11 @@ body {
 
 .similar-description {
   flex-basis: 80%;
-  outline: 2px solid white;
   padding: 3%;
 }
 
 .similar-image {
   flex-basis: 40%;
-  outline: 2px solid white;
 }
 
 @media screen and (max-width: 992px) {
