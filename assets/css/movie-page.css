@@ -1,4 +1,9 @@
 
+body {
+  background-color: #383838;
+  color: white;
+}
+
 .nav-list {
   justify-content: end;
 }
@@ -15,51 +20,53 @@
   display: flex;
   flex-direction: column;
   height: 80vh;
-  outline: 2px solid black;
+  outline: 2px solid white;
 }
 
 .trailer {
   flex-basis: 70%;
-  outline: 2px solid black;
+  outline: 2px solid white;
 }
 
 .movie-info {
   flex-basis: 30%;
   display: flex;
-  outline: 2px solid black;
+  outline: 2px solid white;
 }
 
 .description {
   flex-basis: 70%;
-  outline: 2px solid black;
+  outline: 2px solid white;
+  padding: 2%;
 }
 
 .movie-details {
   flex-basis: 30%;
-  outline: 2px solid black;
+  outline: 2px solid white;
   display: flex;
 }
 
 .details-fields {
   flex-basis: 40%;
-  outline: 2px solid black;
+  outline: 2px solid white;
+  padding: 2%;
 }
 
 .detail-info {
   flex-basis: 60%;
-  outline: 2px solid black;
+  outline: 2px solid white;
+  padding: 2%;
 }
 
 .detail-info ul {
   list-style: none;
-  text-align: left;
+  padding-left: 0;
 }
-
 
 /* Aside section (Similar movie suggestions) */
 .similar-movies {
   flex-basis: 30%;
-  outline: 2px solid black;
+  outline: 2px solid white;
   padding: 3%;
   display: flex;
   flex-direction: column;
@@ -69,33 +76,45 @@
 .similar-movie-card {
   width: 100%;
   height: 20vh;
-  outline: 2px solid black;
+  outline: 2px solid white;
   display: flex;
 }
 
 .similar-info {
-  flex-basis: 70%;
-  outline: 2px solid black;
+  flex-basis: 60%;
+  outline: 2px solid white;
   display: flex;
   flex-direction: column;
 }
 
 .similar-title {
   flex-basis: 20%;
-  outline: 2px solid black;
+  outline: 2px solid white;
+  padding: 3%;
 }
 
 .similar-description {
   flex-basis: 80%;
-  outline: 2px solid black;
+  outline: 2px solid white;
+  padding: 3%;
 }
-
 
 .similar-image {
-  flex-basis: 30%;
-  outline: 2px solid black;
+  flex-basis: 40%;
+  outline: 2px solid white;
 }
 
+@media screen and (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+  .movie-info {
+    flex-direction: column;
+  }
+  .landing-btn {
+    font-size: 3.5vmax;
+  }
+}
 
 
 
