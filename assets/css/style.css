@@ -40,12 +40,7 @@ nav{
 
 h2{
   text-align: center;
-
-/* .container{ */
-
-  
-
-
+}
 
 
 .left{
@@ -124,4 +119,8 @@ h2{
 
 .slide2 {
   background-color: #577399
+}
+
+img {
+  justify-content: space-between;
 }
