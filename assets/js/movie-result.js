@@ -1,10 +1,12 @@
 // Get ID encoded in URL
 let url = new URL(location.href)
-let movie_id = url.searchParams.get('id');
+let movie_title = url.searchParams.get('title');
+var movie="";
+movieData(); //Test call to movieData
 
-async function displayData() {
-    let test = await videoLookup(movie_id);
-    console.log(test)
+async function movieData() {
+    let titleResults = await movieLookup(movie_title);
+    console.log(titleResults)
 }
 
 

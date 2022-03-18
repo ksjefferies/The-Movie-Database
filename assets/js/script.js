@@ -4,7 +4,6 @@ var searchImages = $('#searchResults');
 var trailers = $('#trailers');
 var upComing = $('#upComing');
 
-
 //global variables
 const api_key = '1fc2de251859dcddc136157f2a89acbe';
 var currentSlide = 1;
@@ -21,7 +20,9 @@ searchBtn.on('click', async function (event) {
 
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
-  displaySearchResults(movieResult.results.slice(0,8));
+  displaySearchResults(movieResult.results.slice(0,12));
+
+  console.log(movieResult);
 })
 
 // Param URL and api_key + any parameters
@@ -100,7 +101,7 @@ function displaySearchResults(movieResult) {
       src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult[i].poster_path,
       alt: movieResult[i].title
     }
-    let linkParams = jQuery.param({id: movieResult[i].id})
+    let linkParams = jQuery.param({title: movieResult[i].title})
     $link = $("<a>", {href: "movie-page.html?" + linkParams})
     $img = $('<img>', imageProperties)
     
