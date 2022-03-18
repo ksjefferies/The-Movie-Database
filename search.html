@@ -12,23 +12,28 @@
 </head>
 
 <body>
+
   <main>
-<!-- nav -->
+    <!-- nav -->
     <nav class="navbar navbar-dark bg-dark">
       <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="search.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="favorites.html">Favorites</a>
-          </li>
-          <li class="search-bar"><form class="d-flex">
-              <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button id = "searchBtn" class="btn btn-outline-success" type="submit">Search</button>
-            </form></li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="search.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="favorites.html">Favorites</a>
+        </li>
+
+        <li class="search-bar">
+          <form class="d-flex">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </li>
       </ul>
     </nav>
-<!-- jumbotron -->
+    <!-- jumbotron -->
     <div id="pop" class="p-5 mb-4 rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Fan Favorite Movie Database</h1>
@@ -39,77 +44,71 @@
     <br>
     <h2>Search Results</h2>
     <!-- container for results -->
-    
+
     <div id="searchResults" class="container"></div>
-    
 
-    
-    
     <br>
     <br>
 
-    
     <!-- slideshow -->
-     <aside class="left">
-     <div class="container">
+    <aside class="left">
+      <div class="container">
         <div class="carouselContainer">
+
           <div class="carouselImgs slide1">
             <h1>Slide1</h1>
           </div>
+
           <div class="carouselImgs slide2">
             <h1>Slide2</h1>
           </div>
+
           <div class="carouselImgs slide3">
             <h1>Slide3</h1>
           </div>
-          <span class="prev" id="prev">
-             < </span>
-              <span class="next" id="next">
-                > </span>
+          
+          <span class="prev" id="prev"></span>
+          <span class="next" id="next"></span>
         </div>
       </div>
-    </aside> 
-     
+    </aside>
+
 
     <!-- slideshow -->
     <aside class="right">
       <div class="container">
-         <div class="carouselContainer">
-           <div class="carouselImgs slide1">
-             <h1>Slide1</h1>
-           </div>
-           <div class="carouselImgs slide2">
-             <h1>Slide2</h1>
-           </div>
-           <div class="carouselImgs slide3">
-             <h1>Slide3</h1>
-           </div>
-           <span class="prev" id="prev">
-              < </span>
-               <span class="next" id="next">
-                 > </span>
-         </div>
-       </div>
-     </aside> 
-    
-    
-    
-    
+        <div class="carouselContainer">
+
+          <div class="carouselImgs slide1">
+            <h1>Slide1</h1>
+          </div>
+
+          <div class="carouselImgs slide2">
+            <h1>Slide2</h1>
+          </div>
+
+          <div class="carouselImgs slide3">
+            <h1>Slide3</h1>
+          </div>
+
+          <span class="prev" id="prev"></span>
+          <span class="next" id="next"></span>
+
+        </div>
+      </div>
+    </aside>
+
     <!-- for testing purposes only -->
-      <iframe id="trailers" width="560" height="315" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+    <iframe id="trailers" width="560" height="315" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
 
-      <iframe id="upComing" width="560" height="315" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-
-
-
+    <iframe id="upComing" width="560" height="315" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </main>
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./assets/js/script.js"></script>
-
 </html>

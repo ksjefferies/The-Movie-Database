@@ -137,7 +137,6 @@ window.onload = function () {
 // console.log(sneakPreview) // (VideoLookup)
 // console.log(videoTrailer[videoTrailer.length - 1].key) // (videoTrailer) Key
 
-
   // let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
 
   // // let popularMovies = await topPopularMovies()
@@ -162,5 +161,3 @@ window.onload = function () {
   // // Trailers for both selected movie and upcoming movie
   // trailers.attr('src', 'https://www.youtube.com/embed/' + videoTrailer[videoTrailer.length - 1].key)
   // upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)
-
-  
