@@ -20,6 +20,8 @@ body {
 }
 
 .jumbotron {
+  display: flex;
+  height: auto;
   background-image: url(../images/popcorn.gif);
   background-repeat: no-repeat;
   background-position: center;

@@ -13,32 +13,55 @@
 
 <body>
   <main>
-    <nav class="navbar navbar-dark bg-dark">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="favorites.html">Favorites</a>
-        </li>
-        <li class="search-bar">
-          <form class="d-flex">
-            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </li>
-      </ul>
-      <hr>
-      <hr>
-      <div class="jumbotron container-fluid">
-        <h1 class="display-3">Website Name!</h1>
-        <p class="lead">On this site, you can search for a movie by its title and view the cast, ratings,
-          and trailer.
-        </p>
-      </div>
-      </div>
 
 
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Nav links list -->
+        <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="favorites.html">Favorites</a>
+            </li>
+            <li class="search-bar">
+              <form class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Genres
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Horror</a>
+                <a class="dropdown-item" href="#">Comedy</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        
+  
+  
+      </nav>
+
+     
+     
+     
+     
+     
+     
+     
+     
       <!-- for testing purposes only -->
       <iframe id="trailers" width="560" height="315" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
