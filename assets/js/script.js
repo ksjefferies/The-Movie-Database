@@ -136,6 +136,7 @@ window.onload = function () {
 // console.log(sneakPreview) // (VideoLookup)
 // console.log(videoTrailer[videoTrailer.length - 1].key) // (videoTrailer) Key
 
+
   // let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
 
   // // let popularMovies = await topPopularMovies()
@@ -160,3 +161,31 @@ window.onload = function () {
   // // Trailers for both selected movie and upcoming movie
   // trailers.attr('src', 'https://www.youtube.com/embed/' + videoTrailer[videoTrailer.length - 1].key)
   // upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)
+
+  
+var testBtn = $("#test");
+
+testBtn.on("click", function(){
+  title();
+  description();
+  rating();
+  castList();
+});
+
+function title(){
+  $("#description").append("<h1 id='selectedTitle'>")
+  $("#selectedTitle").text("movieName")
+}
+
+function description(){
+  $("#description").append("<p id='selectedDescription'>")
+  $("#selectedDescription").text("Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nam dolore, molestiae blanditiis fugiat quae vero deserunt libero ab error placeat mollitia sint illo, cumque eaque repudiandae nisi, dolorem neque!")
+}
+
+function rating(){
+  $("#selectedRating").text("R")
+}
+
+function castList(){
+  $("#castList").text("test")
+}
