@@ -18,6 +18,9 @@ searchBtn.on('click', async function (event) {
 
   let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
 
+  let popularMovies = await topPopularMovies()
+  console.log(topRated)
+
   let videoResult = await videoLookup(movieResult.results[0].id) // Retrieve video info for movie being searched
   let videoTrailer = videoResult.results.filter(function (item) {
     return item.type == 'Trailer'
@@ -90,6 +93,12 @@ async function upcomingMovies() {
   let apiSite = 'https://api.themoviedb.org/3/movie/upcoming?';
   let requestUrl = paramApiUrl(apiSite)
   return apiRequest(requestUrl)
+}
+
+async function topPopularMovies() {
+  let apiSite = 'https://api.themoviedb.org/3/movie/popular?';
+  let requestUrl = paramApiUrl(apiSite)
+    return apiRequest(requestUrl)
 }
 
 function showSlide(slideIndex) {
