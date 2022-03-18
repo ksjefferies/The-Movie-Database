@@ -10,7 +10,7 @@ const api_key = '1fc2de251859dcddc136157f2a89acbe';
 var currentSlide = 1;
 
 $('#landingBtn').on("click",function () {
-  location.href = "index.html";
+  location.href = "search.html";
 } )
 
 // API functions start gathering movie information on click
