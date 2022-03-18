@@ -1,5 +1,6 @@
 //jQuery variable elements
 var searchBtn = $('#searchBtn');
+var searchImages = $('#searchResults');
 var trailers = $('#trailers');
 var upComing = $('#upComing');
 
@@ -18,8 +19,8 @@ searchBtn.on('click', async function (event) {
 
   let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
 
-  let popularMovies = await topPopularMovies()
-  console.log(topRated)
+  // let popularMovies = await topPopularMovies()
+  // console.log(topRated)
 
   let videoResult = await videoLookup(movieResult.results[0].id) // Retrieve video info for movie being searched
   let videoTrailer = videoResult.results.filter(function (item) {
@@ -32,9 +33,9 @@ searchBtn.on('click', async function (event) {
   let previewResult = sneakPreview.results.filter(function (item) {
     return item.type == 'Trailer'
   })
-
+  displaySearchResults(movieResult);
   // Images for thumbnail and search results pages
-  $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[0].poster_path }))
+  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[0].poster_path }))
   $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w342' + movieResult.results[0].poster_path }))
 
   // Trailers for both selected movie and upcoming movie
@@ -98,7 +99,7 @@ async function upcomingMovies() {
 async function topPopularMovies() {
   let apiSite = 'https://api.themoviedb.org/3/movie/popular?';
   let requestUrl = paramApiUrl(apiSite)
-    return apiRequest(requestUrl)
+  return apiRequest(requestUrl)
 }
 
 function showSlide(slideIndex) {
@@ -109,6 +110,13 @@ function showSlide(slideIndex) {
     slides[i].style.display = 'none'
   }
   slides[currentSlide - 1].style.display = 'flex'
+}
+
+function displaySearchResults(movieResult) {
+  for (var i = 0; i < 12; i++) {
+    searchImages.append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[i].poster_path }));
+    // $('img').attr('alt', movieResult.results[i].title);
+  }
 }
 
 // Search history slide show (aside index.html)
