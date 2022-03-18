@@ -38,8 +38,103 @@ nav{
   color: black;
 }
 
-#carousel1 {
+/* #carousel1 {
   height: 200px;
   width: 200px;
-  align-items: left;
+  align-items: center;
+  margin-left: 50px;
+}
+
+#carousel2 {
+  height: 200px;
+  width: 200px;
+  align-items: right;
+  margin-right: 50px;
+} */
+
+/* .main-class{
+  width: 500px;
+  margin: auto;
+  background-color: aliceblue;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.slider ul {
+  list-style: none;
+  width: 1500px;
+  position: relative;
+  /* left: -1000px; */
+  /* padding: 0;
+  margin: 0;
+}
+
+.slider ul li {
+  float: left;
+}
+ .slider {
+   width: 500px;
+   overflow: hidden;
+ }
+ */ 
+
+ .container {
+  width: 100%;
+  height: 100vh;
+  background-color: #4a9e961f;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.carouselContainer {
+  width: 60%;
+  height: 90%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.carouselImgs {
+  width: 100%;
+  height: 100%;
+  animation: fade 1.5s;
+  display: none;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 49%;
+  cursor: pointer
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide1 {
+  background-color: #d8e2dc
+}
+
+.slide2 {
+  background-color: #577399
 }
