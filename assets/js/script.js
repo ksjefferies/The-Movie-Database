@@ -163,29 +163,3 @@ window.onload = function () {
   // upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)
 
   
-var testBtn = $("#test");
-
-testBtn.on("click", function(){
-  title();
-  description();
-  rating();
-  castList();
-});
-
-function title(){
-  $("#description").append("<h1 id='selectedTitle'>")
-  $("#selectedTitle").text("movieName")
-}
-
-function description(){
-  $("#description").append("<p id='selectedDescription'>")
-  $("#selectedDescription").text("Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nam dolore, molestiae blanditiis fugiat quae vero deserunt libero ab error placeat mollitia sint illo, cumque eaque repudiandae nisi, dolorem neque!")
-}
-
-function rating(){
-  $("#selectedRating").text("R")
-}
-
-function castList(){
-  $("#castList").text("test")
-}

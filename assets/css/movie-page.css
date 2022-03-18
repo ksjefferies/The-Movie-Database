@@ -40,11 +40,26 @@ body {
   padding: 2%;
 }
 
-.movie-details {
+.details-container {
   flex-basis: 30%;
+  outline: 2px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-details {
+  flex-basis: 50%;
   outline: 2px solid white;
   padding: 2%;
 }
+
+#castList {
+  list-style: none;
+  display: inline;
+  padding-left: 0;
+}
+
+
 
 
 /* Aside section (Similar movie suggestions) */
