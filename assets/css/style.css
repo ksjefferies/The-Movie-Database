@@ -38,44 +38,21 @@ nav{
   color: black;
 }
 
-/* #carousel1 {
-  height: 200px;
-  width: 200px;
-  align-items: center;
-  margin-left: 50px;
-}
-
-#carousel2 {
-  height: 200px;
-  width: 200px;
-  align-items: right;
-  margin-right: 50px;
-} */
-
-/* .main-class{
-  width: 500px;
-  margin: auto;
-  background-color: aliceblue;
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-.slider ul {
-  list-style: none;
-  width: 1500px;
-  position: relative;
-  /* left: -1000px; */
-  /* padding: 0;
-  margin: 0;
-}
-
-.slider ul li {
+.left{
+  width: 35%;
+  padding-left: 15px;
+  margin-left: 15px;
   float: left;
+
 }
- .slider {
-   width: 500px;
-   overflow: hidden;
- }
- */ 
+
+.right{
+  width: 35%;
+  padding-right: 15px;
+  margin-right: 15px;
+  float: right;
+
+}
 
  .container {
   width: 100%;
@@ -83,7 +60,7 @@ nav{
   background-color: #4a9e961f;
   display: flex;
   align-items: center;
-  justify-items: center;
+  /* justify-items: center; */
 }
 
 .carouselContainer {

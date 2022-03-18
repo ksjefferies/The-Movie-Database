@@ -32,3 +32,9 @@
 
 
 # Contributions: Sites Used 
+
+
+# Upgrades:
+
+- Cast info and filmography
+- Automate slides in slideshow on homepage
