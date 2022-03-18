@@ -35,5 +35,11 @@ nav{
 #pop {
   background-image: url(../images/pop.gif);
   background-size: cover;
+  color: black;
 }
 
+#carousel1 {
+  height: 200px;
+  width: 200px;
+  align-items: left;
+}
