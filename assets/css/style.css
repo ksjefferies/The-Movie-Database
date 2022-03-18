@@ -37,9 +37,10 @@ nav{
   background-size: cover;
   color: black;
 }
+
 h2{
   text-align: center;
-}
+
 /* .container{ */
 
   
@@ -69,7 +70,7 @@ h2{
   background-color: #4a9e961f;
   display: flex;
   align-items: center;
-  justify-items: center;
+  /* justify-items: center; */
 }
 
 .carouselContainer {
