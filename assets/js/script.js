@@ -16,7 +16,7 @@ $('#landingBtn').on("click",function () {
 searchBtn.on('click', async function (event) {
   event.preventDefault();
 
-  let genre = await genresLookup() // Genre ID's   
+  //let genre = await genresLookup() // Genre ID's   
 
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
@@ -43,13 +43,6 @@ async function apiRequest(requestString) {
     })
 }
 
-// API for Genre ID's
-async function genresLookup() {
-  let apiSite = 'https://api.themoviedb.org/3/genre/movie/list?';
-  let requestUrl = paramApiUrl(apiSite)
-  return apiRequest(requestUrl)
-}
-
 // Fetch API data for movie inputed into search
 async function movieLookup(movieName) {
   let apiSite = 'https://api.themoviedb.org/3/search/movie?'
@@ -57,17 +50,13 @@ async function movieLookup(movieName) {
   return apiRequest(requestUrl)
 }
 
-// Fetch API cast data by movie_ID pulled from movieResult
-async function creditLookup(movie_id) {
-  let apiSite = 'https://api.themoviedb.org/3/movie/' + movie_id + '/credits?';
-  let requestUrl = paramApiUrl(apiSite)
-  return apiRequest(requestUrl)
-}
+async function movieIDLookup(movie_id) {
+  let apiSite = 'https://api.themoviedb.org/3/movie/' + movie_id + "?"
 
-// Fetch API movie trailer data by movie_id from movieResult
-async function videoLookup(movie_id) {
-  let apiSite = 'https://api.themoviedb.org/3/movie/' + movie_id + '/videos?';
-  let requestUrl = paramApiUrl(apiSite)
+  let requestUrl = paramApiUrl(apiSite,{
+    append_to_response: 'videos,images,credits,similar,release_dates'
+  })
+  console.log(requestUrl)
   return apiRequest(requestUrl)
 }
 
@@ -98,10 +87,10 @@ function displaySearchResults(movieResult) {
   searchImages.empty();
   for (var i = 0; i < movieResult.length; i++) {
     let imageProperties = {
-      src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult[i].poster_path,
+      src: 'https://image.tmdb.org/t/p/' + 'w185' + movieResult[i].poster_path,
       alt: movieResult[i].title
     }
-    let linkParams = jQuery.param({title: movieResult[i].title})
+    let linkParams = jQuery.param({id: movieResult[i].id})
     $link = $("<a>", {href: "movie-page.html?" + linkParams})
     $img = $('<img>', imageProperties)
     
