@@ -73,49 +73,51 @@ async function topPopularMovies() {
   return apiRequest(requestUrl)
 }
 
-function showSlide(slideIndex) {
-  const slides = document.getElementsByClassName('carouselImgs');
-  if (slideIndex > slides.length) { currentSlide = 1 }
-  if (slideIndex < 1) { currentSlide = slides.length }
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none'
-  }
-  slides[currentSlide - 1].style.display = 'flex'
-}
-
 function displaySearchResults(movieResult) {
   searchImages.empty();
   for (var i = 0; i < movieResult.length; i++) {
-    let imageProperties = {
-      src: 'https://image.tmdb.org/t/p/' + 'w185' + movieResult[i].poster_path,
-      alt: movieResult[i].title
-    }
-    let linkParams = jQuery.param({id: movieResult[i].id})
-    $link = $("<a>", {href: "movie-page.html?" + linkParams})
-    $img = $('<img>', imageProperties)
-    
-    searchImages.append($link.append($img));
+    if (movieResult[i].poster_path != null) {
+      let imageProperties = {
+        src: 'https://image.tmdb.org/t/p/' + 'w185' + movieResult[i].poster_path,
+        alt: movieResult[i].title
+      }
+      let linkParams = jQuery.param({id: movieResult[i].id})
+      $link = $("<a>", {href: "movie-page.html?" + linkParams})
+      $img = $('<img>', imageProperties)
+      
+      searchImages.append($link.append($img));
+    }    
   }
 }
 
+// function showSlide(slideIndex) {
+//   const slides = document.getElementsByClassName('carouselImgs');
+//   if (slideIndex > slides.length) { currentSlide = 1 }
+//   if (slideIndex < 1) { currentSlide = slides.length }
+//   for (var i = 0; i < slides.length; i++) {
+//     slides[i].style.display = 'none'
+//   }
+//   slides[currentSlide - 1].style.display = 'flex'
+// }
+
 // Search history slide show (aside index.html)
-function nextSlide() {
-  showSlide(currentSlide += 1);
-}
+// function nextSlide() {
+//   showSlide(currentSlide += 1);
+// }
 
-function previousSlide() {
-  showSlide(currentSlide -= 1);
-}
+// function previousSlide() {
+//   showSlide(currentSlide -= 1);
+// }
 
-window.onload = function () {
-  showSlide(currentSlide);
-  document.getElementById('prev').addEventListener('click', function () {
-    previousSlide();
-  })
-  document.getElementById('next').addEventListener('click', function () {
-    nextSlide();
-  })
-}
+// window.onload = function () {
+//   showSlide(currentSlide);
+//   document.getElementById('prev').addEventListener('click', function () {
+//     previousSlide();
+//   })
+//   document.getElementById('next').addEventListener('click', function () {
+//     nextSlide();
+//   })
+// }
 
 // *** Console.log statements for testing ***
 // console.log(genre) // (genresLookup)
