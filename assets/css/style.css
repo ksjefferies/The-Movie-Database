@@ -63,9 +63,11 @@ h2{
   width: 100%;
   height: 100vh;
   background-color: #4a9e961f;
-  display: flex;
+  display: grid;
+  gap: 25px;
   align-items: center;
-  /* justify-items: center; */
+
+
 }
 
 .carouselContainer {
@@ -119,4 +121,15 @@ h2{
 
 .slide2 {
   background-color: #577399
+}
+
+div.container a {
+  padding: 10px;
+  margin: 90px;
+  height: 100px;
+  width: 50px;
+  display: grid;
+  position:relative;
+  float: left;
+  /* grid-template-rows: auto; */
 }
