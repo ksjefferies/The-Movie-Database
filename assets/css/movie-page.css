@@ -11,13 +11,17 @@ body {
   align-content: center;
 }
 
-.nav {
+.navbar {
   justify-content: space-between;
-  width: 100%;
+}
+
+
+
+.nav-item {
+  list-style: none;
 }
 
 .nav-list {
-  justify-content: space-between;
   display: flex;
 }
 
@@ -173,4 +177,12 @@ body {
     justify-content: space-between;
     padding: 0 4%;
   }
+  .selected-movie {
+    border: none;
+  }
+  .movie-details {
+    border: none;
+  }
+
+
 }
