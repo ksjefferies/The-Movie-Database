@@ -64,4 +64,18 @@ function favoriteMovies() {
   var title = movie_title.text();
   movieList.push(title);
   localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
+  favoritesIcon();
 } 
+
+
+// checks local storage for the currently viewed title to decide which icon to show for favorites
+if (localStorage.getItem('favoriteMovies').stringify= $("#movieTitle").text){
+  favoritesIcon()
+};
+
+// changes icon to solid if added to favorites
+function favoritesIcon() {
+  var favoritesIcon = $("#favoritesIcon")
+  favoritesIcon.removeClass("fa-regular")
+  favoritesIcon.addClass("fa-solid")
+}

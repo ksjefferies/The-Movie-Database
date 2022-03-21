@@ -25,11 +25,6 @@ body {
   color: white;
 }
 
-#searchBtn {
-  border-color: black;
-  color: white;
-  background-color: lightskyblue;
-}
 /* Main body section */
 .content {
   display: flex;
@@ -38,17 +33,36 @@ body {
 
 #pop {
   /* background-image: url(../images/header-img-2.jpg); */
-  background-color: #34568b;
+  /* background-color: #34568b; */
   background-size: cover;
   color: white;
-  height: 100%;  
+  height: 100%;
+  display: flex;
+  padding-left: 7vw;
+  padding-top: 7vh;
+
 }
+
+#movieTitle {
+  font-size: 7vh;
+  padding-right: 2vw;
+}
+
+#favorites {
+  background: none;
+  border: none;
+  
+}
+
+.fa-heart {
+  color: white;
+}
+
 /* Main section (Movie the user is currently viewing) */
 .selected-movie {
   flex-basis: 70%;
   display: flex;
   flex-direction: column;
-  /* height: 80vh; */
   outline: 2px solid white;
 }
 
