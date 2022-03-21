@@ -3,7 +3,7 @@
 ## Objectives
 
 -----
-In this project, i did the following:
+In this project, we did the following:
 
 - User is initially presented with a landing page that describes the site.
 - Once the user clicks the button in the center of the screen they are taken to a search page
@@ -30,9 +30,16 @@ In this project, i did the following:
 -----
 ## Links for Github Repository and final public page
 
-- [Github Repository for Code Quiz](https://github.com/ksjefferies/project-1)
+- [Github Repository for Project-1](https://github.com/ksjefferies/project-1)
 
-- [Code Quiz final page](https://ksjefferies.github.io/project-1/)
+- [Project-1 final page](https://ksjefferies.github.io/project-1/)
 
 # Contributions:
+
+Remaining items to complete and deadlines
+
+Matt: working on the search results detailed: by end of day
+Matt: will create buttons for the add to fav and access: by end of day
+Rohit: working on setting up the local storage setup, will create functions to add to storage and display storage: end of day
+Rohit: will have presentations by end of day
 
