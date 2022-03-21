@@ -11,14 +11,18 @@ body {
   align-content: center;
 }
 
-#nav {
-  width: auto;
-  margin: 0;
-  padding: 0;
+.nav {
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav-list {
-  justify-content: end;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-link {
+  color: white;
 }
 
 #searchBtn {
@@ -82,7 +86,7 @@ body {
   outline: 2px solid white;
   padding: 2%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .cast-list {
