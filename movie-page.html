@@ -33,13 +33,14 @@
       </div>
     </ul>
   </nav>
-  <div id="pop" class=" mb-3 rounded-3">
-    <h1 class="display-5 fw-bold" id="movieTitle"></h1>
-    <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon"style="font-size:7vh"></i></button>
-  </div>
+
   <div class="content">
     <!-- Selected movie information -->
     <main class="selected-movie">
+      <div class="title">
+        <h1 class="display-5 fw-bold" id="movieTitle"></h1>
+        <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon"style="font-size:7vh"></i></button>
+      </div>
       <div id="trailer-container">
         <iframe id="trailers" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -49,20 +50,16 @@
 
         <!-- Movie Description -->
         <div id='result_background' class="description">
-          <h1 ></h1>
-
+          <h1>Description</h1>
           <p id="movieDescrip"></p>
         </div>
 
         <!-- Movie Details (rating, cast, reviews, etc.) -->
         <div class="movie-details">
           <h2 id="movie_rating">MPAA Rating: </h2>
-
-
           <div class="cast-list">
             <h2>Cast</h2>
             <ul id="movie_cast">
-
             </ul>
           </div>
         </div>
@@ -71,15 +68,8 @@
 
     <!-- Similar movie suggestions -->
     <aside class="similar-movies">
-      <div class="similar-movie-card">
-      <!-- <div class="similar-info">
-        <div class="similar-title"> -->
-            <!-- <h2>Titanic</h2> -->
-          </div>
-
-
-        
-      </div>
+      <h2>More Like This</h2>
+      <div class="similar-posters"></div>
     </aside>
   </div>
 
