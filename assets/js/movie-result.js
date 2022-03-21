@@ -45,7 +45,10 @@ async function displayMovieObject(movieObject) {
 
   let certification = [...new Set(certifications)].join(',')
   movie_rating.append(certification)
+
+  displaySearchResults(movieObject.similar.results.slice(0,6), $(".similar-movies"))
 }
+
 
 // Display searched movie trailer on search results page
 function videoTrailer(movieObject) {
