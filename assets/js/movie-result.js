@@ -51,12 +51,3 @@ async function displayMovieObject(movieObject) {
 async function videoTrailer(movieObject) {
   trailers.attr('src', 'https://www.youtube.com/embed/' + movieObject.videos.results[movieObject.videos.results.length - 1].key)
 }
-
-
-// --------------------------
-testBtn.on("click", function () {
-  title();
-  description();
-  rating();
-  castList();
-});

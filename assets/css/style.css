@@ -1,27 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.search {
-  display: block;
-  float: right;
-
-}
-
 body {
-  background-color: lightgray;
+  background-color: #C0C0C0;
+  max-height: 100vh;
 }
 
-nav{
-  position: fixed;
-  
+nav {
+  position: fixed; 
 }
 #searchBtn {
-  border-color: blue;
-  color: azure;
+  border-color: black;
+  color: white;
+  background-color: lightskyblue;
 }
-
 
 .display-3 {
   color: white;
@@ -29,90 +18,19 @@ nav{
 
 .lead {
   color: white;
-
 }
 
 #pop {
-  background-image: url(../images/pop.gif);
+  background-image: url(../images/header-img-2.jpg);
   background-size: cover;
+  color: white;
+  width: 100%;
+  height: 100%;  
+}
+
+h2 {
+  text-align: center;
   color: black;
-}
-
-h2{
-  text-align: center;
-}
-
-
-.left{
-  width: 45%;
-  padding-left: 15px;
-  margin-left: 15px;
-  float: left;
-
-}
-
-.right{
-  width: 45%;
-  padding-right: 15px;
-  margin-right: 15px;
-  float: right;
-
-}
-
- .container {
-  width: 100%;
-  height: 100vh;
-  background-color: #4a9e961f;
-  display: grid;
-  gap: 25px;
-  align-items: center;
-
-
-}
-
-.carouselContainer {
-  width: 60%;
-  height: 90%;
-  margin: 0 auto;
-  position: relative;
-  background-color: #fff;
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
-
-.carouselImgs {
-  width: 100%;
-  height: 100%;
-  animation: fade 1.5s;
-  display: none;
-  padding: 20px;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-}
-
-.prev, .next {
-  position: absolute;
-  top: 49%;
-  cursor: pointer
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .slide1 {
@@ -123,13 +41,17 @@ h2{
   background-color: #577399
 }
 
-div.container a {
-  padding: 10px;
-  margin: 90px;
-  height: 100px;
-  width: 50px;
-  display: grid;
-  position:relative;
-  float: left;
-  /* grid-template-rows: auto; */
+div.container {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
 }
