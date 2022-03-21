@@ -58,7 +58,7 @@ favoriteButton.onclick = favoriteMovies;
 var movieList = [];
 
 function favoriteMovies() {
-  var title = movie_title.text;
+  var title = movie_title.text();
   movieList.push(title);
   localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
 } 
