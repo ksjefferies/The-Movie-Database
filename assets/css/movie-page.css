@@ -1,13 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #383838;
   color: white;
+  max-width: 100vw;
+  align-content: center;
+}
 
+#nav {
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list {
   justify-content: end;
 }
+
 #searchBtn {
   border-color: black;
   color: white;
@@ -16,14 +29,14 @@ body {
 /* Main body section */
 .content {
   display: flex;
-  width: 100vw;
+  width: 100%;
 }
+
 #pop {
   /* background-image: url(../images/header-img-2.jpg); */
   background-color: #34568b;
   background-size: cover;
   color: white;
-  width: 100%;
   height: 100%;  
 }
 /* Main section (Movie the user is currently viewing) */
@@ -31,7 +44,7 @@ body {
   flex-basis: 70%;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  /* height: 80vh; */
   outline: 2px solid white;
 }
 
@@ -42,7 +55,7 @@ body {
 
 #trailers {
   width: 100%;
-  height: 100%;
+  height: 40vw;
 }
 
 .movie-info {
@@ -68,12 +81,25 @@ body {
   flex-basis: 50%;
   outline: 2px solid white;
   padding: 2%;
+  display: flex;
+  justify-content: space-between;
 }
 
-#castList {
+.cast-list {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cast-list h2 {
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+#movie_cast {
   list-style: none;
-  display: inline;
-  padding-left: 0;
+  line-height: 2;
 }
 
 /* Aside section (Similar movie suggestions) */
@@ -87,7 +113,6 @@ body {
 }
 
 .similar-movie-card {
-  width: 100%;
   height: 20vh;
   outline: 2px solid white;
   display: flex;
@@ -107,7 +132,7 @@ body {
 }
 
 .similar-description {
-  flex-basis: 80%;
+  flex-basis: 75%;
   padding: 3%;
 }
 
@@ -127,6 +152,6 @@ body {
   }
   #trailers {
     width: 100vw;
-    height: 50vw;
+    height: 60vw;
   }
 }
