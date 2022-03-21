@@ -21,8 +21,6 @@ searchBtn.on('click', async function (event) {
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
   displaySearchResults(movieResult.results.slice(0,12));
-
-  console.log(movieResult);
 })
 
 // Param URL and api_key + any parameters
@@ -56,7 +54,6 @@ async function movieIDLookup(movie_id) {
   let requestUrl = paramApiUrl(apiSite,{
     append_to_response: 'videos,images,credits,similar,release_dates'
   })
-  console.log(requestUrl)
   return apiRequest(requestUrl)
 }
 
@@ -89,37 +86,3 @@ function displaySearchResults(movieResult) {
     }    
   }
 }
-
-// *** Console.log statements for testing ***
-// console.log(genre) // (genresLookup)
-// console.log(movieResult) // (movieLookup)
-// console.log(castResult) // (creditLookup)
-// console.log(videoResult) // (videoLookup)
-// console.log(sneakResult.results[0].id) //(upcomingMovies)
-// console.log(sneakPreview) // (VideoLookup)
-// console.log(videoTrailer[videoTrailer.length - 1].key) // (videoTrailer) Key
-
-  // let castResult = await creditLookup(movieResult.results[0].id) // Retrieve cast information
-
-  // // let popularMovies = await topPopularMovies()
-  // // console.log(topRated)
-
-  // let videoResult = await videoLookup(movieResult.results[0].id) // Retrieve video info for movie being searched
-  // let videoTrailer = videoResult.results.filter(function (item) {
-  //   return item.type == 'Trailer'
-  // })
-
-  // let sneakResult = await upcomingMovies(); // Retrieve list of upcoming movies 
-
-  // let sneakPreview = await videoLookup(sneakResult.results[(Math.floor(Math.random() * 10))].id) // Retrieve random upcoming movie trailer
-  // let previewResult = sneakPreview.results.filter(function (item) {
-  //   return item.type == 'Trailer'
-  // })
- 
-  // Images for thumbnail and search results pages
-  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w154' + movieResult.results[0].poster_path }))
-  // $('body').append($('<img>', { src: 'https://image.tmdb.org/t/p/' + 'w342' + movieResult.results[0].poster_path }))
-
-  // // Trailers for both selected movie and upcoming movie
-  // trailers.attr('src', 'https://www.youtube.com/embed/' + videoTrailer[videoTrailer.length - 1].key)
-  // upComing.attr('src', 'https://www.youtube.com/embed/' + previewResult[previewResult.length - 1].key)

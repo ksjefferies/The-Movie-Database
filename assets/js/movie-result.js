@@ -1,7 +1,7 @@
 // Get ID encoded in URL
 let url = new URL(location.href)
 let movie_id = url.searchParams.get('id');
-var testBtn = $("#test");
+// var testBtn = $("#test");
 
 var trailers = $('#trailers');
 
@@ -15,7 +15,7 @@ movieData(); // Initial population of search results page
 
 async function movieData() {
   let titleResults = await movieIDLookup(movie_id);
-  console.log(titleResults)
+
   displayMovieObject(titleResults);
 }
 
@@ -48,6 +48,6 @@ async function displayMovieObject(movieObject) {
 }
 
 // Display searched movie trailer on search results page
-async function videoTrailer(movieObject) {
+function videoTrailer(movieObject) {
   trailers.attr('src', 'https://www.youtube.com/embed/' + movieObject.videos.results[movieObject.videos.results.length - 1].key)
 }
