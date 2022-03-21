@@ -1,5 +1,5 @@
 body {
-  background-color: #C0C0C0;
+  background-color: white;
   max-height: 100vh;
 }
 
@@ -21,7 +21,8 @@ nav {
 }
 
 #pop {
-  background-image: url(../images/header-img-2.jpg);
+  /* background-image: url(../images/header-img-2.jpg); */
+  background-color: #34568b;
   background-size: cover;
   color: white;
   width: 100%;
@@ -33,13 +34,13 @@ h2 {
   color: black;
 }
 
-.slide1 {
+/* .slide1 {
   background-color: #d8e2dc
 }
 
 .slide2 {
   background-color: #577399
-}
+} */
 
 div.container {
  display: flex;
