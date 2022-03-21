@@ -20,7 +20,7 @@ searchBtn.on('click', async function (event) {
 
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
-  displaySearchResults(movieResult.results.slice(0,20));
+  displaySearchResults(movieResult.results.slice(0,20),searchImages);
 })
 
 // Param URL and api_key + any parameters
@@ -70,8 +70,8 @@ async function topPopularMovies() {
   return apiRequest(requestUrl)
 }
 
-function displaySearchResults(movieResult) {
-  searchImages.empty();
+function displaySearchResults(movieResult,container) {
+  container.empty();
   for (var i = 0; i < movieResult.length; i++) {
     if (movieResult[i].poster_path != null) {
       let imageProperties = {
@@ -82,7 +82,7 @@ function displaySearchResults(movieResult) {
       $link = $("<a>", {href: "movie-page.html?" + linkParams})
       $img = $('<img>', imageProperties)
       
-      searchImages.append($link.append($img));
+      container.append($link.append($img));
     }    
   }
 }
