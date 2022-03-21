@@ -15,22 +15,24 @@
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Movie Result</a>
+  <!-- nav -->
+  <nav class="navbar navbar-dark bg-dark">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="search.html">Home</a>
+      </li>
 
-    <!-- Nav links list -->
-    <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-
-        <li class="nav-item active">
-          <a class="nav-link" href="search.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-
-      </ul>
-    </div>
+      <li class="search-bar">
+        <form class="d-flex">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </li>
+    </ul>
   </nav>
-
+  <div id="pop" class="p-5 mb-4 rounded-3">
+    <h1 class="display-5 fw-bold">Search Results</h1>
+  </div>
   <div class="content">
     <!-- Selected movie information -->
     <main class="selected-movie">
