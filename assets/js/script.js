@@ -20,7 +20,7 @@ searchBtn.on('click', async function (event) {
 
   let movieName = $('#searchInput').val();
   let movieResult = await movieLookup(movieName); // Movie data for movie search
-  displaySearchResults(movieResult.results.slice(0,12));
+  displaySearchResults(movieResult.results.slice(0,20));
 })
 
 // Param URL and api_key + any parameters
