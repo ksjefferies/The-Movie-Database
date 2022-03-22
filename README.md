@@ -1,7 +1,6 @@
 # Project-1
 
-## Objectives
-
+## Objective
 -----
 In this project, we did the following:
 
@@ -14,18 +13,17 @@ In this project, we did the following:
     - Movie Title
     - Cast
     - Rating
-    - Movie descriptio
+    - Movie description
     - Movie trailer
-- User is able to click on the 'Add to favorites' button to have the movie added to their favorite movie    list, which is stored through local storage.
+    - User can add movie to favorite list, within local storage
 -----
 
-## Final screenshots of initial and results page
+## Final screenshots of pages
 
-![Screenshot of Project Landing Page](./assets/images/)
+![Screenshot of Project Landing Page](./assets/images/landing-page.jpg)
 ![Screenshot of Movie Search Page](./assets/images/movie-search-page.jpg)
 ![Screenshot of Movie Search Results](./assets/images/movie-search-results.jpg)
 ![Screenshot of Movie Details](./assets/images/)
-![Screenshot of Favorite List in local storage](./assets/images/)
 
 -----
 ## Links for Github Repository and final public page
@@ -35,11 +33,6 @@ In this project, we did the following:
 - [Project-1 final page](https://ksjefferies.github.io/project-1/)
 
 # Contributions:
-
-Remaining items to complete and deadlines
-
-Matt: working on the search results detailed: by end of day
-Matt: will create buttons for the add to fav and access: by end of day
-Rohit: working on setting up the local storage setup, will create functions to add to storage and display storage: end of day
-Rohit: will have presentations by end of day
-
+- Kelly
+- Matt
+- Rohit
