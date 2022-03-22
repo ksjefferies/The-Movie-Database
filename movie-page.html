@@ -47,13 +47,16 @@
         <h1 class="display-5 fw-bold" id="movieTitle"></h1>
         <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon"style="font-size:7vh"></i></button>
       </div>
+
+      <!-- Trailer container -->
       <div id="trailer-container">
         <iframe id="trailers" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
-      <div class="movie-info">
 
+      <div class="movie-info">
         <!-- Movie Description -->
         <div id='result_background' class="description">
           <h1>Description</h1>
@@ -78,11 +81,6 @@
       <div class="similar-posters"></div>
     </aside>
   </div>
-  
-  <div>
-    <ul id = favlist></ul>
-  </div>
-
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
