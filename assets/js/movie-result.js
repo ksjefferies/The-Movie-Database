@@ -69,7 +69,6 @@ function favoriteMovies() {
    movieList = [];
   }
  var title = movie_title.text();
- console.log(movieList);
  movieList.push(title);
  localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
  favoritesIcon();
@@ -89,3 +88,4 @@ function favoritesIcon() {
   favoritesIcon.removeClass("fa-regular")
   favoritesIcon.addClass("fa-solid")
 }
+
