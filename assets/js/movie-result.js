@@ -58,7 +58,12 @@ function videoTrailer(movieObject) {
 var favoriteButton = document.querySelector('#favorites');
 favoriteButton.onclick = favoriteMovies;
 
-var movieList = [];
+
+if (localStorage.getItem('favs')){
+  var movieList = localStorage.getItem('favs');
+} else {
+  var movieList = [];
+}
 
 function favoriteMovies() {
   var title = movie_title.text();
