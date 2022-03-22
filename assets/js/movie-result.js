@@ -1,8 +1,6 @@
 // Get ID encoded in URL
 let url = new URL(location.href)
 let movie_id = url.searchParams.get('id');
-// var testBtn = $("#test");
-
 var trailers = $('#trailers');
 
 // Global Variables
@@ -47,7 +45,7 @@ async function displayMovieObject(movieObject) {
   let certification = [...new Set(certifications)].join(',')
   movie_rating.append(certification)
 
-  displaySearchResults(movieObject.similar.results.slice(0,6), $(".similar-posters"))
+  displaySearchResults(movieObject.similar.results.slice(0, 6), $(".similar-posters"))
 }
 
 // Display searched movie trailer on search results page
@@ -60,18 +58,16 @@ var favoriteButton = document.querySelector('#favorites');
 favoriteButton.onclick = favoriteMovies;
 
 function favoriteMovies() {
-  if (JSON.parse(localStorage.getItem('favoriteMovies'))){
-   movieList = JSON.parse(localStorage.getItem('favoriteMovies'));
+  if (JSON.parse(localStorage.getItem('favoriteMovies'))) {
+    movieList = JSON.parse(localStorage.getItem('favoriteMovies'));
   } else {
-   movieList = [];
+    movieList = [];
   }
- var title = movie_title.text();
- movieList.push(title);
- localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
- favoritesIcon();
+  var title = movie_title.text();
+  movieList.push(title);
+  localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
+  favoritesIcon();
 }
-
-// checks local storage for the currently viewed title to decide which icon to show for favorites
 
 // changes icon to solid if added to favorites
 function favoritesIcon() {
@@ -79,4 +75,3 @@ function favoritesIcon() {
   favoritesIcon.removeClass("fa-regular")
   favoritesIcon.addClass("fa-solid")
 }
-
