@@ -86,6 +86,7 @@ function favoritesIcon() {
 
 //function to view favorites
 function view() {
+
     var list = document.getElementById('favlist');
     JSON.parse(localStorage.getItem('favoriteMovies')).forEach((item) => {
       let  = document.createElement('li');
