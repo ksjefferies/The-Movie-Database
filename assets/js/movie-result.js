@@ -58,7 +58,6 @@ function videoTrailer(movieObject) {
 //favorite function
 var favoriteButton = document.querySelector('#favorites');
 favoriteButton.onclick = favoriteMovies;
-favoriteButton.onclick = view;
 
 function favoriteMovies() {
   if (JSON.parse(localStorage.getItem('favoriteMovies'))){
@@ -73,9 +72,6 @@ function favoriteMovies() {
 }
 
 // checks local storage for the currently viewed title to decide which icon to show for favorites
-if (localStorage.getItem('favoriteMovies').stringify= $("#movieTitle").text){
-  favoritesIcon()
-};
 
 // changes icon to solid if added to favorites
 function favoritesIcon() {
@@ -84,12 +80,3 @@ function favoritesIcon() {
   favoritesIcon.addClass("fa-solid")
 }
 
-//function to view favorites
-function view() {
-
-    var list = document.getElementById('favlist');
-    JSON.parse(localStorage.getItem('favoriteMovies')).forEach((item) => {
-      let  = document.createElement('li');
-      list.appendChild(li);
-    });
-}
