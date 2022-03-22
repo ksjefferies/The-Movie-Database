@@ -55,22 +55,27 @@ function videoTrailer(movieObject) {
   trailers.attr('src', 'https://www.youtube.com/embed/' + movieObject.videos.results[movieObject.videos.results.length - 1].key)
 }
 
+//favorite function
+
 var favoriteButton = document.querySelector('#favorites');
 favoriteButton.onclick = favoriteMovies;
 
-
-if (localStorage.getItem('favs')){
-  var movieList = localStorage.getItem('favs');
-} else {
-  var movieList = [];
-}
+var movieList;
 
 function favoriteMovies() {
-  var title = movie_title.text();
-  movieList.push(title);
-  localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
-  favoritesIcon();
-} 
+  if (JSON.parse(localStorage.getItem('favoriteMovies'))){
+   movieList = JSON.parse(localStorage.getItem('favoriteMovies'));
+  } else {
+   movieList = [];
+  }
+ var title = movie_title.text();
+ console.log(movieList);
+ movieList.push(title);
+ localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
+ favoritesIcon();
+}
+
+
 
 
 // checks local storage for the currently viewed title to decide which icon to show for favorites
