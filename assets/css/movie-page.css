@@ -32,7 +32,6 @@ body {
 
 .nav-list {
   display: flex;
-  flex-direction: column;
 }
 
 .nav-link {
@@ -104,6 +103,7 @@ body {
 
 #movie_rating {
   border-bottom: 2px solid white;
+  text-align: center;
 }
 
 .cast-list {
@@ -126,7 +126,6 @@ body {
 /* Aside section (Similar movie suggestions) */
 .similar-movies {
   flex-basis: 30%;
-  /* border: 2px solid white; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -196,5 +195,7 @@ body {
   .navbar {
     padding-top: 2vh;
   }
-
+  .nav-list {
+    flex-direction: column;
+  }
 }
