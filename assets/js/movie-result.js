@@ -57,7 +57,8 @@ function videoTrailer(movieObject) {
 
 //favorite function
 var favoriteButton = document.querySelector('#favorites');
-favoriteButton.onclick = favoriteMovies;view;
+favoriteButton.onclick = favoriteMovies;
+favoriteButton.onclick = view;
 
 function favoriteMovies() {
   if (JSON.parse(localStorage.getItem('favoriteMovies'))){
@@ -85,5 +86,11 @@ function favoritesIcon() {
 
 //function to view favorites
 function view() {
-    document.getElementById('fav1').innerHTML = JSON.parse(localStorage.getItem('favoriteMovies'))
-  }
+
+    var list = document.getElementById('favlist');
+    JSON.parse(localStorage.getItem('favoriteMovies')).forEach((item) => {
+      let  = document.createElement('li');
+      list.appendChild(li);
+    });
+}
+
