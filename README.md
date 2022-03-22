@@ -23,7 +23,7 @@ In this project, we did the following:
 ![Screenshot of Project Landing Page](./assets/images/landing-page.jpg)
 ![Screenshot of Movie Search Page](./assets/images/movie-search-page.jpg)
 ![Screenshot of Movie Search Results](./assets/images/movie-search-results.jpg)
-![Screenshot of Movie Details](./assets/images/search-results-details.jpg)
+![Screenshot of Movie Details](./assets/images/movie-details.jpg)
 
 -----
 ## Links for Github Repository and final public page
