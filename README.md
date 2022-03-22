@@ -1,6 +1,9 @@
-# Project-1
+# Project-1: The Movie Database
 
-## Objective
+## Objective:
+
+The Movie Database is a central location for a user to search for a movie title and get presented with the summary of the movie, top cast members, MPAA rating, Movie Trailer, as well as other movie suggestions.  
+
 -----
 In this project, we did the following:
 
@@ -18,7 +21,7 @@ In this project, we did the following:
     - User can add movie to favorite list, within local storage
 -----
 
-## Final screenshots of pages
+## The Movie Database Images:
 
 ![Screenshot of Project Landing Page](./assets/images/landing-page.jpg)
 ![Screenshot of Movie Search Page](./assets/images/movie-search-page.jpg)
@@ -26,17 +29,23 @@ In this project, we did the following:
 ![Screenshot of Movie Details](./assets/images/movie-details.jpg)
 
 ----
-Responsonsive layout on iPhone 12 Pro Max
+## Responsive layout on iPhone 12 Pro Max
+
 ![Screenshot of Site Responsiveness on iPhone 12 Pro Max](./assets/images/Responsive-design.jpg)
 
 -----
-## Links for Github Repository and final public page
+## Links for Github Repository and The Movie Database public page:
 
-- [Github Repository for Project-1](https://github.com/ksjefferies/project-1)
+- [Github Repository for Project-1: The Movie Database](https://github.com/ksjefferies/project-1)
 
-- [Project-1 final page](https://ksjefferies.github.io/project-1/)
+- [Project-1: The Movie Database](https://ksjefferies.github.io/project-1/)
 
-# Contributions:
-- Kelly Jefferies
-- Matt Jackson
-- Rohit Balachandar
+# Authors:
+
+- [Kelly Jefferies](https://github.com/ksjefferies)
+- [Matt Jackson](https://github.com/Matt4292)
+- [Rohit Balachandar](https://github.com/Robala98)
+
+# License:
+
+This code is licensed under the MIT License
