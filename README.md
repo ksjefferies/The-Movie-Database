@@ -25,6 +25,10 @@ In this project, we did the following:
 ![Screenshot of Movie Search Results](./assets/images/movie-search-results.jpg)
 ![Screenshot of Movie Details](./assets/images/movie-details.jpg)
 
+----
+Responsonsive layout on iPhone 12 Pro Max
+![Screenshot of Site Responsiveness on iPhone 12 Pro Max](./assets/images/Responsive-design.jpg)
+
 -----
 ## Links for Github Repository and final public page
 
@@ -33,6 +37,6 @@ In this project, we did the following:
 - [Project-1 final page](https://ksjefferies.github.io/project-1/)
 
 # Contributions:
-- Kelly
-- Matt
-- Rohit
+- Kelly Jefferies
+- Matt Jackson
+- Rohit Balachandar
