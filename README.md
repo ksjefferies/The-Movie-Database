@@ -22,9 +22,9 @@ In this project, we did the following:
 ## Final screenshots of initial and results page
 
 ![Screenshot of Project Landing Page](./assets/images/)
-![Screenshot of Search Page](./assets/images/)
-![Screenshot of Search Results Page](./assets/images/)
-![Screenshot of Movie Detail Page](./assets/images/)
+![Screenshot of Movie Search Page](./assets/images/movie-search-page.jpg)
+![Screenshot of Movie Search Results](./assets/images/movie-search-results.jpg)
+![Screenshot of Movie Details](./assets/images/)
 ![Screenshot of Favorite List in local storage](./assets/images/)
 
 -----
