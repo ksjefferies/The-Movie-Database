@@ -10,6 +10,7 @@ let movie_title = $("#movieTitle")
 let movie_descrip = $('#movieDescrip')
 let movie_rating = $('#movie_rating');
 let movie_cast = $('#movie_cast')
+var movieList;
 
 movieData(); // Initial population of search results page 
 
@@ -49,18 +50,14 @@ async function displayMovieObject(movieObject) {
   displaySearchResults(movieObject.similar.results.slice(0,6), $(".similar-posters"))
 }
 
-
 // Display searched movie trailer on search results page
 function videoTrailer(movieObject) {
   trailers.attr('src', 'https://www.youtube.com/embed/' + movieObject.videos.results[movieObject.videos.results.length - 1].key)
 }
 
 //favorite function
-
 var favoriteButton = document.querySelector('#favorites');
 favoriteButton.onclick = favoriteMovies;view;
-
-var movieList;
 
 function favoriteMovies() {
   if (JSON.parse(localStorage.getItem('favoriteMovies'))){
@@ -73,9 +70,6 @@ function favoriteMovies() {
  localStorage.setItem('favoriteMovies', JSON.stringify(movieList));
  favoritesIcon();
 }
-
-
-
 
 // checks local storage for the currently viewed title to decide which icon to show for favorites
 if (localStorage.getItem('favoriteMovies').stringify= $("#movieTitle").text){
@@ -90,8 +84,6 @@ function favoritesIcon() {
 }
 
 //function to view favorites
-
 function view() {
     document.getElementById('fav1').innerHTML = JSON.parse(localStorage.getItem('favoriteMovies'))
   }
-
