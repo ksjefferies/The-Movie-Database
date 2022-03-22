@@ -21,7 +21,6 @@ nav {
 }
 
 #pop {
-  /* background-image: url(../images/header-img-2.jpg); */
   background-color: #34568b;
   background-size: cover;
   color: white;
@@ -33,14 +32,6 @@ h2 {
   text-align: center;
   color: black;
 }
-
-/* .slide1 {
-  background-color: #d8e2dc
-}
-
-.slide2 {
-  background-color: #577399
-} */
 
 div.container {
  display: flex;

@@ -10,6 +10,7 @@ body {
   max-width: 100vw;
 }
 
+/* Navbar format settings */
 .navbar {
   justify-content: space-between;
   align-items: baseline;
@@ -137,6 +138,7 @@ body {
   padding: 0;
 }
 
+/* Responsive layout settings */
 @media screen and (max-width: 992px) {
   .content {
     flex-direction: column;
