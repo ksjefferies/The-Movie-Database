@@ -93,4 +93,3 @@ function view() {
       list.appendChild(li);
     });
 }
-
