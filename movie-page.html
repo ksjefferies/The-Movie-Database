@@ -24,39 +24,42 @@
     </li>
     <ul class="nav">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <nav class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <nav class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="nav-list">
+
           <li class="nav-item">
             <a class="nav-link" href="https://www.amazon.com/Prime-Video/b?node=2676882011">Stream Now</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="https://www.fandango.com">Buy Tickets</a>
           </li>
+
         </div>
       </nav>
     </ul>
   </nav>
 
-  <div class="content">
+  <main class="content">
     <!-- Selected movie information -->
-    <main class="selected-movie">
+    <section class="selected-movie">
       <div class="title">
         <h1 class="display-5 fw-bold" id="movieTitle"></h1>
-        <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon"style="font-size:7vh"></i></button>
+        <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon" style="font-size:7vh"></i></button>
       </div>
-      
+
       <figure id="trailer-container">
         <iframe id="trailers" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </figure>
+
+
       <section class="movie-info">
-
-
-      <div class="movie-info">
         <!-- Movie Description -->
         <article id='result_background' class="description">
           <h1>Description</h1>
@@ -68,19 +71,18 @@
           <h2 id="movie_rating">MPAA Rating: </h2>
           <article class="cast-list">
             <h2>Cast</h2>
-            <ul id="movie_cast">
-            </ul>
-          </acticle>
+            <ul id="movie_cast"></ul>
+            </acticle>
         </section>
       </section>
-    </main>
+    </section>
 
     <!-- Similar movie suggestions -->
     <aside class="similar-movies">
-      <h2>More Like This</h2>
+      <h2>Movies Suggestions</h2>
       <div class="similar-posters"></div>
     </aside>
-  </div>
+  </main>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
