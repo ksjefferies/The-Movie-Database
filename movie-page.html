@@ -27,7 +27,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <nav class="collapse navbar-collapse" id="navbarSupportedContent"> 
         <div class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="https://www.amazon.com/Prime-Video/b?node=2676882011">Stream Now</a>
@@ -36,7 +36,7 @@
             <a class="nav-link" href="https://www.fandango.com">Buy Tickets</a>
           </li>
         </div>
-      </div>
+      </nav>
     </ul>
   </nav>
 
@@ -47,32 +47,32 @@
         <h1 class="display-5 fw-bold" id="movieTitle"></h1>
         <button id="favorites"><i class="fa-regular fa-heart" id="favoritesIcon"style="font-size:7vh"></i></button>
       </div>
-
-      <!-- Trailer container -->
-      <div id="trailer-container">
+      
+      <figure id="trailer-container">
         <iframe id="trailers" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+          allowfullscreen></iframe>
+      </figure>
+      <section class="movie-info">
+
 
       <div class="movie-info">
         <!-- Movie Description -->
-        <div id='result_background' class="description">
+        <article id='result_background' class="description">
           <h1>Description</h1>
           <p id="movieDescrip"></p>
-        </div>
+        </article>
 
         <!-- Movie Details (rating, cast, reviews, etc.) -->
-        <div class="movie-details">
+        <section class="movie-details">
           <h2 id="movie_rating">MPAA Rating: </h2>
-          <div class="cast-list">
+          <article class="cast-list">
             <h2>Cast</h2>
             <ul id="movie_cast">
             </ul>
-          </div>
-        </div>
-      </div>
+          </acticle>
+        </section>
+      </section>
     </main>
 
     <!-- Similar movie suggestions -->
@@ -85,9 +85,6 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
