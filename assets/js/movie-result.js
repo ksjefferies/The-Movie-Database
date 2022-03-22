@@ -58,7 +58,7 @@ function videoTrailer(movieObject) {
 //favorite function
 
 var favoriteButton = document.querySelector('#favorites');
-favoriteButton.onclick = favoriteMovies;
+favoriteButton.onclick = favoriteMovies;view;
 
 var movieList;
 
@@ -88,4 +88,10 @@ function favoritesIcon() {
   favoritesIcon.removeClass("fa-regular")
   favoritesIcon.addClass("fa-solid")
 }
+
+//function to view favorites
+
+function view() {
+    document.getElementById('fav1').innerHTML = JSON.parse(localStorage.getItem('favoriteMovies'))
+  }
 
