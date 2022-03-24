@@ -40,12 +40,21 @@ In this project, we did the following:
 
 - [Project-1: The Movie Database](https://ksjefferies.github.io/project-1/)
 
-# Authors:
+## Authors:
 
 - [Kelly Jefferies](https://github.com/ksjefferies)
 - [Matt Jackson](https://github.com/Matt4292)
 - [Rohit Balachandar](https://github.com/Robala98)
 
-# License:
+## Technologies Used:
+
+- Javascript
+- HTML
+- CSS
+- jQuery
+- BootStrap
+- The Movie Db API's
+
+## License:
 
 This code is licensed under the MIT License
